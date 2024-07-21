@@ -15,4 +15,11 @@ $ npm i --save-dev @types/browser-sync
 
 # gulp- cli
 $ npm i -g gulp-cli
+
+
+# spin up gulp
+$ gulp
+
+# or Use  Npm
+$ npm start
 ```
