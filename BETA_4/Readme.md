@@ -1,0 +1,15 @@
+# BOOtrap Beta version
+
+## Installation of Package
+
+```bash
+# main package
+$  npm i bootstrap font-awesome jquery popper.js --save
+
+# Development package
+$ npm i gulp gulp-sass browser-sync --save-dev
+
+
+# gulp- cli
+$ npm i -g gulp-cli
+```
