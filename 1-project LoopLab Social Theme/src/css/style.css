@@ -1,0 +1,17 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+nav.navbar {
+  border-bottom: #008ed6;
+  opacity: 0.8;
+}
+
+.fa-check {
+  color: #fff;
+}
+
+#home-section {
+  background: url();
+}

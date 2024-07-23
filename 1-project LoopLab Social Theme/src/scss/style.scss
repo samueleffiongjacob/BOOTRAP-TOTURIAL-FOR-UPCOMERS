@@ -1,0 +1,23 @@
+$bg-color:#333;
+$font-color:#fff;
+$primary-color:#008ed6;
+
+body{
+    background-color: $bg-color;
+    color: $font-color;
+    
+}
+
+nav.navbar{
+    border-bottom:$primary-color;
+    opacity: 0.8;
+}
+
+
+.fa-check{
+    color: $font-color;
+}
+
+#home-section{
+    background: url();
+}
