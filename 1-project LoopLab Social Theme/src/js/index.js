@@ -42,6 +42,7 @@ $(document).ready(function() {
         return isValid;
     }
 
+
     // Handle form submission
     $form.on("submit", function(event) {
         // Perform required field validation
@@ -65,7 +66,7 @@ $(document).ready(function() {
         } else {
             // Form is valid; you can add form submission logic here
             alert('Form submitted successfully!');
-
+          
             // Reset the form after submission
             $form[0].reset(); // Use native DOM reset method
 
