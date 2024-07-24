@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body id="home">
     
@@ -80,19 +81,19 @@
                                 <div class="card-body">
                                     <h3>Sign Up Today</h3>
                                     <p>Please fill out this fprm to register</p>
-                                    <form>
+                                    <form id="registrationForm">
                                         <div class="form-group mb-3">
-                                            <input type="text" class="form-control form-control-lg" placeholder="Username">
+                                            <input type="text" class="form-control form-control-lg" placeholder="Username" id="username">
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email">
+                                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail email" aria-describedby="emailHelp" placeholder="Email">
                                             <!-- <div id='emailHelp' class="form-text">We'll never share your email with anyone else.</div> -->
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="password" class="form-control form-control-lg" placeholder="Password">
+                                            <input type="password" class="form-control form-control-lg" placeholder="Password" id="password">
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="password" class="form-control form-control-lg" placeholder="Confirm Password">
+                                            <input type="password" class="form-control form-control-lg" placeholder="Confirm Password" id="confirmPassword">
                                         </div>
                                         <input type="submit" class="mb-3 btn btn-outline-light btn-block">
                                     </form>
@@ -105,10 +106,223 @@
         </div>
     </header>
 
+    <!-- Explore Head -->
+     
+    <section id="explore-head-section">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="py-5">
+                        <h1 class="display-4">Explore</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nesciunt ea consequatur delectus ipsum voluptatibus praesentium officia iusto impedit culpa, ad voluptate? Magnam nemo quisquam veritatis veniam, aliquid non tempore.</p>
+                        <a href="#" class="btn btn-outline-secondary">Find Out More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore SECTION -->
+
+    <section id="explore-section" class="bg-light text-muted py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/explore-section1.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+                </div>
+                <div class="col-md-6">
+                    <h3>Explore & Connect</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, maxime. Culpa quis, eius est deserunt beatae doloribus vitae similique exercitationem hic blanditiis harum corrupti debitis?</p>
+                    <!-- column 1 -->
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, omnis aut vero, eos aliquid debitis quae eum dicta porro tenetur quaerat minima et dolore odit culpa consequuntur doloremque, blanditiis sapiente.
+                        </div>
+                    </div>
+                    <!-- column 2 -->
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, omnis aut vero, eos aliquid debitis quae eum dicta porro tenetur quaerat minima et dolore odit culpa consequuntur doloremque, blanditiis sapiente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CREATE Head -->
+     
+    <section id="create-head-section" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="py-5">
+                        <h1 class="display-4">Create</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nesciunt ea consequatur delectus ipsum voluptatibus praesentium officia iusto impedit culpa, ad voluptate? Magnam nemo quisquam veritatis veniam, aliquid non tempore.</p>
+                        <a href="#" class="btn btn-outline-light">Find Out More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create SECTION -->
+
+    <section id="create-section" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Create your passion</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, maxime. Culpa quis, eius est deserunt beatae doloribus vitae similique exercitationem hic blanditiis harum corrupti debitis?</p>
+                    <!-- column 1 -->
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, omnis aut vero, eos aliquid debitis quae eum dicta porro tenetur quaerat minima et dolore odit culpa consequuntur doloremque, blanditiis sapiente.
+                        </div>
+                    </div>
+                    <!-- column 2 -->
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, omnis aut vero, eos aliquid debitis quae eum dicta porro tenetur quaerat minima et dolore odit culpa consequuntur doloremque, blanditiis sapiente.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/create-section1.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SHARE Head -->
+     
+    <section id="share-head-section" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="py-5">
+                        <h1 class="display-4">Share</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nesciunt ea consequatur delectus ipsum voluptatibus praesentium officia iusto impedit culpa, ad voluptate? Magnam nemo quisquam veritatis veniam, aliquid non tempore.</p>
+                        <a href="#" class="btn btn-outline-light">Find Out More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHARE SECTION -->
+
+    <section id="share-section" class="py-5 bg-light text-muted ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/share-section1.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+                </div>
+                <div class="col-md-6">
+                    <h3>Share what you create</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, maxime. Culpa quis, eius est deserunt beatae doloribus vitae similique exercitationem hic blanditiis harum corrupti debitis?</p>
+                    <!-- column 1 -->
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, omnis aut vero, eos aliquid debitis quae eum dicta porro tenetur quaerat minima et dolore odit culpa consequuntur doloremque, blanditiis sapiente.
+                        </div>
+                    </div>
+                    <!-- column 2 -->
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, omnis aut vero, eos aliquid debitis quae eum dicta porro tenetur quaerat minima et dolore odit culpa consequuntur doloremque, blanditiis sapiente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MAIN FOOTER -->
+     
+    <footer id="main-footer" class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="py-4">
+                        <h1 class="h3">LoopLab</h1>
+                        <p>Copyright &copy; 2024</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CONTACT MODAL -->
+
+    <div class="modal fade text-dark" id="contactModal"  tabindex="-1" aria-labelledby="contactModalTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalTitle">Contact Us</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3" novalidate id="contactForm" action="">
+                        <div class="form-group">
+                            <label for="validationCustom01">Name</label>
+                            <input type="text" class="form-control" id="validationCustom01"  required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="validationEmail">Email</label>
+                            <div class="input-group has-validation">
+                                <input type="email" class="form-control" id="validationEmail" required>
+                                <div class="invalid-feedback">enter email</div>
+                                <div class="valid-feedback">Looks good!</div>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="name">Message</label>
+                            <textarea class="form-control is-invalid"  id="validationTextarea" placeholder="Please enter message here" required></textarea>
+                            <div class="invalid-feedback"> Please enter a message in the textarea.</div>
+                        </div> -->
+
+                        <div class="mb-3">
+                            <label for="validationTextarea" class="form-label">Textarea</label>
+                            <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                            <div class="invalid-feedback">Please enter a message in the textarea.</div>
+                            <div class="valid-feedback">Looks good!</div>
+                        <div class="modal-footer">
+                            <button  class="btn btn-primary btn-block" type="submit"  id="submitBtn" data-dismiss="modal">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/index.js"></script>
 </body>
 </html>

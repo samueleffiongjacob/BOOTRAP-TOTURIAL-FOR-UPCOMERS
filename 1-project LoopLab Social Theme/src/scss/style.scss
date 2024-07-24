@@ -1,6 +1,11 @@
+// Import Font Awesome in your main SCSS file
+@import "~font-awesome/scss/font-awesome.scss";
+
 $bg-color:#333;
 $font-color:#fff;
 $primary-color:#008ed6;
+$dark-overlay: rgba(0,0,0,0.7) ;// last value is the opacity
+$icon-size:30px;
 
 body{
     background-color: $bg-color;
@@ -9,15 +14,64 @@ body{
 }
 
 nav.navbar{
-    border-bottom:$primary-color;
+    border-bottom:2px solid$primary-color;
     opacity: 0.8;
 }
 
 
-.fa-check{
-    color: $font-color;
+.fa{
+    color: $primary-color;
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $icon-size;
 }
 
+// back ground image
 #home-section{
-    background: url();
+    background: url(../img/home.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+
+    // dark overlay
+    .dark-overlay{
+        background-color: $dark-overlay;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 700px;
+    }
+
+    // padding
+    .home-inner{
+        padding-top: 150px;
+    }
+
+    // form overlay.
+    .card-form{
+        opacity: 0.8;
+    }
+}
+
+
+#explore-section,#share-section{
+    .fa{
+        color: #fff;
+        background: #333;
+        padding:4px;
+        border-radius: 5px;
+        font-size: $icon-size;
+    }
+}
+
+#create-section{
+    .fa{
+        color: $primary-color;
+        background-color: #fff;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: $icon-size;
+    }
 }
