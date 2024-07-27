@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoopLab Social Theme</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
@@ -18,7 +19,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggleDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- me-auto push it to the left
+                ms-auto push it to the right -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 mx-10">
                     <li class="nav-item">
                         <a href="#home" class="nav-link">Home</a>
                     </li>
@@ -84,27 +87,38 @@
                                     <form id="registrationForm" action="#share-head-section">
                                         <div class="form-group mb-3">
                                             <input type="text" class="form-control form-control-lg" placeholder="Username" id="username">
-                                            <div class="invalid-feedback">Please Enter Username..</div>
-                                            <div class="valid-feedback">Looks good!</div>
+                                            <!-- <div class="invalid-feedback">Please Enter Username..</div>
+                                            <div class="valid-feedback">Looks good!</div> -->
                                         </div>
                                         <div class="form-group mb-3">
                                             <input type="email" class="form-control form-control-lg" id="email" aria-describedby="emailHelp" placeholder="Email">
                                             <!-- <div id='emailHelp' class="form-text">We'll never share your email with anyone else.</div> -->
-                                            <div class="invalid-feedback">Please enter email:We'll never share your email with anyone else.</div>
-                                            <div class="valid-feedback">Looks good!</div>
+                                            <!-- <div class="invalid-feedback">Please enter email:We'll never share your email with anyone else.</div>
+                                            <div class="valid-feedback">Looks good!</div> -->
                                         </div>
                                         <div class="form-group mb-3">
                                             <input type="password" class="form-control form-control-lg" placeholder="Password" id="password">
-                                            <div class="invalid-feedback">Please enter new password...</div>
-                                            <div class="valid-feedback">Looks good!</div>
+                                            <!-- <div class="invalid-feedback">Please enter new password...</div>
+                                            <div class="valid-feedback">Looks good!</div> -->
                                         </div>
                                         <div class="form-group mb-3">
                                             <input type="password" class="form-control form-control-lg" placeholder="Confirm Password" id="confirmPassword">
-                                            <div class="invalid-feedback">Please Password not a match..</div>
-                                            <div class="valid-feedback">Looks good!</div>
+                                            <!-- <div class="invalid-feedback">Please Password not a match..</div>
+                                            <div class="valid-feedback">Looks good!</div> -->
                                         </div>
                                         <input type="submit" class="mb-3 btn btn-outline-light btn-block">
                                     </form>
+
+                                    <div class="toast-container position-fixed top-0 end-0 p-3">
+                                        <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="4000">
+                                            <div class="d-flex">
+                                                <div class="toast-body">
+                                                    <i class="fa fa-check"></i> You have successfully Sign Up Today!
+                                                </div>
+                                                <!-- <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button> -->
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -284,55 +298,72 @@
     </footer>
 
     <!-- CONTACT MODAL -->
-
-    <div class="modal fade text-dark" id="contactModal"  tabindex="-1" aria-labelledby="contactModalTitle" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="contactModalTitle">Contact Us</h5>
-                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span>&times;</span></button>
-                </div>
-                <div class="modal-body">
-                    <form class="row g-3" novalidate id="contactForm" action="">
-                        <div class="form-group">
-                            <label for="validationCustom01">Name</label>
-                            <input type="text" class="form-control" id="validationCustom01"  required>
-                            <div class="valid-feedback">Looks good!</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="validationEmail">Email</label>
-                            <div class="input-group has-validation">
-                                <input type="email" class="form-control" id="validationEmail" required>
-                                <div class="invalid-feedback">Enter email: We'll never share your email with anyone else.</div>
+    <section>
+        
+        <div class="modal fade text-dark" id="contactModal"  tabindex="-1" aria-labelledby="contactModalTitle" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalTitle">Contact Us</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3" novalidate id="contactForm" action="">
+                            <div class="form-group">
+                                <label for="validationCustom01">Name</label>
+                                <input type="text" class="form-control" id="validationCustom01"  required>
                                 <div class="valid-feedback">Looks good!</div>
                             </div>
-                        </div>
-                        <!-- <div class="form-group">
-                            <label for="name">Message</label>
-                            <textarea class="form-control is-invalid"  id="validationTextarea" placeholder="Please enter message here" required></textarea>
-                            <div class="invalid-feedback"> Please enter a message in the textarea.</div>
-                        </div> -->
+                            <div class="form-group">
+                                <label for="validationEmail">Email</label>
+                                <div class="input-group has-validation">
+                                    <input type="email" class="form-control" id="validationEmail" required>
+                                    <div class="invalid-feedback">Enter email: We'll never share your email with anyone else.</div>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="name">Message</label>
+                                <textarea class="form-control is-invalid"  id="validationTextarea" placeholder="Please enter message here" required></textarea>
+                                <div class="invalid-feedback"> Please enter a message in the textarea.</div>
+                            </div> -->
 
-                        <div class="mb-3">
-                            <label for="validationTextarea" class="form-label">Textarea</label>
-                            <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
-                            <div class="invalid-feedback">Please enter a message in the textarea.</div>
-                            <div class="valid-feedback">Looks good!</div>
-                        <div class="modal-footer">
-                            <button  class="btn btn-primary btn-block" type="submit"  id="submitBtn" data-dismiss="modal">Submit</button>
-                        </div>
-                    </form>
+                            <div class="mb-3">
+                                <label for="validationTextarea" class="form-label">Textarea</label>
+                                <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                                <div class="invalid-feedback">Please enter a message in the textarea.</div>
+                                <div class="valid-feedback">Looks good but meassage should be minimum of 30 words!</div>
+                            <div class="modal-footer">
+                                <!-- do this inside js instead : data-dismiss="modal" -->
+                                <button  class="btn btn-primary btn-block" type="submit"  id="submitBtn">Submit</button> 
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+
+        <div class="toast-container position-fixed top-0 end-0 p-3">
+            <div id="successToastsForContact" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="4000">
+                <div class="d-flex">
+
+                    <div class="toast-body">
+                        <i class="fa fa-check"></i>Thank you for contacting us! A customer care representative will attend to you shortly.
+                    </div>
+                    <!-- <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
-    <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="js/navbar-fixed.js"></script>
     <!-- sweetalert2/dist/sweetalert2.min.js -->
 </body>
 </html>

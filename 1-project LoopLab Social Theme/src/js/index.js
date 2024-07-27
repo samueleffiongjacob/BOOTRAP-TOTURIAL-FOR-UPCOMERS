@@ -42,6 +42,13 @@ $(document).ready(function() {
         return isValid;
     }
 
+    // Show toast notification
+    function showToast(registrationForm) {
+    var toastEl = document.getElementById(registrationForm);
+    var toast = new bootstrap.Toast(toastEl);
+    toast.show();
+    }
+
 
     // Handle form submission
     $form.on("submit", function(event) {
@@ -57,15 +64,31 @@ $(document).ready(function() {
             // Trigger validation feedback
             validatePasswords();
 
-            // Optionally display a message to the user
+            // Optionally display a message to the user old 
+
+            // if (!requiredFieldsValid) {
+            //     alert('Please fill in all required fields.');
+            // } else if (!passwordsValid) {
+            //     alert('Passwords do not match.');
+            // }
+
+            // new one Show error toast
+            showToast('errorToast');
+
+            //Optionally display a message to the user
+
             if (!requiredFieldsValid) {
-                alert('Please fill in all required fields.');
+                console.log('Please fill in all required fields.');
             } else if (!passwordsValid) {
-                alert('Passwords do not match.');
-            }
+                console.log('Passwords do not match.');
+            } 
+
         } else {
             // Form is valid; you can add form submission logic here
-            alert('Form submitted successfully!');
+            // alert('Form submitted successfully!');
+            // Form is valid; show success toast
+            showToast('successToast');
+
           
             // Reset the form after submission
             $form[0].reset(); // Use native DOM reset method
@@ -77,53 +100,33 @@ $(document).ready(function() {
     });
 });
 
-
+// toast and model show at the same time
 document.addEventListener('DOMContentLoaded', (event) => {
     const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
+    const successToastElement = document.getElementById('successToastsForContact');
+    const successToast = new bootstrap.Toast(successToastElement, { delay: 5000 }); // Set delay to 5000ms (5 seconds)
 
-    submitBtn.addEventListener('click', function(event) {
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        if (form.checkValidity()) {
+            successToast.show();
+            
+            // Delay hiding the modal to ensure the toast is shown
+            setTimeout(() => {
+                const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+                modal.hide();
+            }, 5000); // Delay the modal hide for 5 seconds (same as toast delay)
+            
+
+            
+            form.reset();
+            form.classList.remove('was-validated');
         } else {
-            // Optionally, you can add code here to handle form submission
-            alert('Form submitted successfully!');
-
-               // Reset the form fields
-               form.reset();
-               
-            // Close the modal manually if form is valid
-            const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-            modal.hide();
+            form.classList.add('was-validated');
         }
-        form.classList.add('was-validated');
     });
 });
-
-
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     const form = document.getElementById('contactForm');
-//     const submitBtn = document.getElementById('submitBtn');
-
-//     submitBtn.addEventListener('click', function(event) {
-//         if (form.checkValidity() === false) {
-//             event.preventDefault();
-//             event.stopPropagation();
-//         } else {
-//             // Optionally, you can add code here to handle form submission
-//             alert('Form submitted successfully!');
-
-//                // Reset the form fields
-//                form.reset();
-               
-//             // Close the modal manually if form is valid
-//             const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-//             modal.hide();
-//         }
-//         form.classList.add('was-validated');
-//     });
-// });
-
 
 

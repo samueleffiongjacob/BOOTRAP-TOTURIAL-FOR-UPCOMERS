@@ -6,6 +6,7 @@ body {
 nav.navbar {
   border-bottom: 2px solid #008ed6;
   opacity: 0.8;
+  position: relative;
 }
 
 .fa {
@@ -35,6 +36,13 @@ nav.navbar {
 }
 #home-section .card-form {
   opacity: 0.8;
+}
+#home-section .toast-container {
+  padding-top: 150px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1050;
 }
 
 #explore-section .fa, #share-section .fa {

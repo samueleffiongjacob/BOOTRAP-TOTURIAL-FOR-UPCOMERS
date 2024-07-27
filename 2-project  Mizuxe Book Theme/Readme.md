@@ -28,3 +28,8 @@ $ npm start
 $ npm -g yarn
 $ yarn start
 ```
+
+To edit source varaible for bootrap:
+go to: node_module/bootrap/_variables.scss
+u can change anything there
+then reload
