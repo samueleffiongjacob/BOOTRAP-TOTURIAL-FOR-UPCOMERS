@@ -22,9 +22,9 @@ $ gulp
 
 # or Use  Npm
 $ npm start
-
-# or Use  Npm or yarn
-# you can install yarn by:
-$ npm -g yarn
-$ yarn start
 ```
+
+[Lightbox for Bootstrap](https://ashleydw.github.io/lightbox/)
+[slick](https://kenwheeler.github.io/slick/)
+
+## this source code shall be are entry point at all times
