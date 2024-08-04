@@ -18,19 +18,23 @@
             <div class="col-lg-4 col-md-5">
               <img src="img/person1.jpg" class="img-fluid">
             </div>
-            <div class="col-lg-8 col-md-7">
+            <div class="col-lg-8 col-md-7 mt-0">
               <div class="d-flex flex-column">
-                <div class="p-5 bg-dark text-white">
+                <div class="p-5 bg-dark text-white flex-grow-1">
                   <div class="name d-flex flex-row justify-content-between align-items-center">
-                    <h1 class="display-4">Samuel Effiong</h1>
-                    <div><i class="fa fa-twitter"></i></div>
-                    <div><i class="fa fa-facebook"></i></div>
-                    <div><i class="fa fa-instagram"></i></div>
-                    <div><i class="fa fa-github"></i></div>
+                    <div class="d-flex flex-row">
+                        <h1 class="display-4 py-0">Samuel Effiong</h1>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-2"><i class="fa fa-twitter"></i></div>
+                        <div class="p-2"><i class="fa fa-facebook"></i></div>
+                        <div class="p-2"><i class="fa fa-instagram"></i></div>
+                        <div class="p-2"><i class="fa fa-github"></i></div>
+                    </div>
                   </div>
                 </div>
       
-                <div class="p-4 bg-black">
+                <div class="p-4 bg-black flex-column">
                   Experienced Software Engineer
                 </div>
       
@@ -51,7 +55,6 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </header>
       
@@ -252,9 +255,9 @@
         <!-- FOOTER -->
         <footer id="main-footer" class="p-5 bg-dark text-white">
           <div class="row">
-            <div class="col mb-0">
-              <a href="#" class="btn btn-outline-light "><i class="fa fa-cloud"></i> Download Resume</a>
-              <p class="lead text-center space">Copyright &copy; <span id="current-year"></span> My Portfolio</p>
+            <div class="col-12 d-flex justify-content-between align-items-center flex-column flex-lg-row">
+              <a href="#" class="btn btn-outline-light mb-2 mb-lg-0"><i class="fa fa-cloud"></i> Download Resume</a>
+              <p class="lead text-center space mb-0">Copyright &copy; <span id="current-year"></span> My Portfolio</p>
             </div>
           </div>
         </footer>
