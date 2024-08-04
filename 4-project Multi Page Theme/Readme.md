@@ -24,6 +24,7 @@ $ gulp
 $ npm start
 ```
 
+[lightbox for latest](https://trvswgnr.github.io/bs5-lightbox/)
 [Lightbox for Bootstrap](https://ashleydw.github.io/lightbox/)
 [slick](https://kenwheeler.github.io/slick/)
 

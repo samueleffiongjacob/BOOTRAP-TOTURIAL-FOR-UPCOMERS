@@ -64,3 +64,16 @@ document.addEventListener('hidden.bs.modal', function (event) {
     }
 });
   
+
+// testimonial slidder
+$(document).ready(function(){
+    $('.slider').slick({
+      infinite: true,
+      speed: 600, // smooth scroll transsition
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      autoplay: true, // Enable auto slide
+      autoplaySpeed: 2000 // Set auto slide interval to 2000 milliseconds (2 seconds)
+    });
+  });

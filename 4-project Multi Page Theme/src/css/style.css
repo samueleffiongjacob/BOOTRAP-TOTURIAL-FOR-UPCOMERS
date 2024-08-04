@@ -84,13 +84,27 @@ footer#main-footer {
   margin-top: -50px;
 }
 
-#faq .card {
-  border: #444;
+#faq .accordion-item {
+  border: 1px solid #444;
 }
-#faq .card a {
+#faq .accordion-item .accordion-header {
+  background: #333;
+}
+#faq .accordion-item .accordion-button {
   color: #fff;
   text-decoration: none;
+  background-color: #333;
 }
-#faq .card-body, #faq .card-header {
-  background: #333;
+#faq .accordion-item .accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: #444;
+}
+#faq .accordion-item .accordion-body {
+  background: #222;
+  color: #fff;
+}
+
+#blog .card-columns .card .card-img-top {
+  width: 100%;
+  margin: 0 auto;
 }

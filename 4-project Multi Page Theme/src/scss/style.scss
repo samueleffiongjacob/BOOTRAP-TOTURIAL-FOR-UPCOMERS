@@ -96,16 +96,51 @@ footer#main-footer{
   }
 }
 
-#faq{
-  .card{
-    border:#444;
-    a{
-      color:#fff;
-      text-decoration:none;
+// #faq{
+//   .accordion-item{
+//     border:#444;
+//     a{
+//       color:#fff;
+//       text-decoration:none;
+//     }
+//   }
+
+//   .accordion-item .accordion-header{
+//     background:#333;
+//   }
+// }
+
+
+#faq {
+  .accordion-item {
+    border: 1px solid #444; // Corrected border property
+    .accordion-header {
+      background: #333;
+    }
+    .accordion-button {
+      color: #fff;
+      text-decoration: none;
+      background-color: #333; // Ensure the button inherits the header background
+      &:not(.collapsed) {
+        color: #fff;
+        background-color: #444; // Change color when accordion is expanded
+      }
+    }
+    .accordion-body {
+      background: #222;
+      color: #fff; // Add body background for contrast
     }
   }
+}
 
-  .card-body, .card-header{
-    background:#333;
+
+#blog {
+  .card-columns {
+    .card {
+      .card-img-top {
+        width: 100%; // Adjust the width as needed
+        margin: 0 auto; // Center the image
+      }
+    }
   }
 }
